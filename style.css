@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&family=Single+Day&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+:root {
+    --cor-alpha: #F4D35E;
+    --cor-beta: #EE964B;
+    --cor-gamma: #FAF0CA;
+    --cor-delta: #F95738;
+    --cor-epsilon: #0D3B66;
+
+    --fonte-primaira:  'Poor Story', system-ui;
+    --fonte-secundaria:  'Single Day', cursive;    ;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-alpha);
+}
+
+.cabecalho {
+    background-color: var(--cor-delta);
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    padding: 1% 0%;
+}
+
+.cabecalho__naveg {
+    font-family: var(--fonte-secundaria);
+    font-size: 2rem;
+    color: var(--cor-gamma);
+}
+
+/* .cabecalho__naveg:hover {
+    background-color: var(--cor-beta);
+} */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+}
+
+.mensagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    
+}
+
+.mensagem__titulo {
+    width: 63%;
+    font-family: var(--fonte-primaira);
+    font-size: 4rem;
+    color: var(--cor-beta);
+    text-align: center;
+    text-shadow: -2px 1px 2px var(--cor-epsilon);
+}
+
+strong {
+    padding: 0% 5%;
+} 
+
+.mensagem__imagem {
+    width: 20%;
+    height: 20%;
+}
+
+.carta {
+    width: 70%;
+    background-color: var(--cor-gamma);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0;
+    margin: 5% 0;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.452);
+}
+
+.carta__titulo {
+    font-family: var(--fonte-primaira);
+    font-size: 3rem;
+    color: var(--cor-beta);
+}
+
+.carta__paragrafo {
+    font-family: var(--fonte-primaira);
+    font-size: 3rem;
+    color: var(--cor-beta);
+    margin: 10%;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.galeria__titulo {
+    font-family: var(--fonte-primaira);
+    font-size: 3.5rem;
+    color: var(--cor-beta);
+    text-shadow: -1px 1px 5px black;
+}
+
+.galeria__galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gap: 5%; */
+}
+
+.galeria__fotos {
+    width: 22%;
+    padding: 1%;
+    border-radius: 50px;
+    margin: 1%;
+    border: 20px groove var(--cor-delta);
+    /* background-color: var(--cor-delta); */
+    
+}
+
+.rodape {
+    background-color: var(--cor-epsilon);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodape__creditos {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    color: var(--cor-beta);
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    main {
+        padding: 1%;
+    }
+    .mensagem {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .carta {
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 850px){
+    .mensagem {
+        flex-direction: column-reverse;
+        padding: 0% 2%;
+    }
+    .mensagem__imagem {
+        width: 30%;
+    }
+    .mensagem__titulo {
+        width: 100%;
+        font-size: 3.5rem;
+    }
+    .galeria__fotos {
+        width: 39%;
+    }
+}
+
+@media (max-width: 600px){
+    .cabecalho__naveg {
+        padding: 0% 5%;
+        text-align: center;
+    }
+
+    .mensagem__titulo {
+        font-size: 3rem;
+    }
+     .carta {
+         width: 95%;
+         text-align: center;
+     }
+
+    .carta__titulo {
+        margin: 1%;
+    }
+
+    .galeria__fotos {
+        width: 40%;
+        padding: 0;
+        border-radius: 25px;
+        border: 12px groove var(--cor-delta);
+    }
+
+
+}
+
